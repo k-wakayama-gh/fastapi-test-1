@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+Employees | Wacca IT Engineer
+{% endblock title %}
+{% block content %}
+
+{% for employee in employees %}
+<li>{{ employee.first_name }}</li>
+<li>{{ employee.surname }}</li>
+<li>{{ employee.department.name }}</li>
+<li>{{ employee.job.title }}</li>
+{% endfor %}
+
+{% endblock content %}
